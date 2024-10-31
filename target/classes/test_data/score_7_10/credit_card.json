@@ -1,0 +1,115 @@
+{
+  "Account": {
+    "linkedAccRef": "",
+    "userId": "ObjectId('67176c486d5ad817f74a8388')",
+    "maskedAccNumber": "",
+    "version": "1.0",
+    "type": "credit_card",
+    "Profile": {
+      "Holders": {
+        "Holder": {
+          "name": "",
+          "dob": "2002-09-24",
+          "mobile": "8879254212",
+          "nominee": "NOT-REGISTERED",
+          "email": "qw@gmail.com",
+          "pan": "AAAPL1234C",
+          "ckycCompliance": true,
+          "Cards": {
+            "Card": {
+              "cardType": "RUPAY",
+              "primary": "YES",
+              "issuedDate": "2004-04-12",
+              "maskedCardNumber": ""
+            }
+          }
+        }
+      }
+    },
+    "Summary": {
+      "currentDue": 3000,
+      "lastStatementDate": "2004-04-12",
+      "dueDate": "2004-04-12",
+      "previousDueAmount": 100,
+      "totalDueAmount": 2000,
+      "minDueAmount": 200,
+      "creditLimit": 3000,
+      "cashLimit": 400,
+      "availableCredit": 3000,
+      "loyaltyPoints": 20,
+      "financeCharges": 50
+    },
+    "Transactions": {
+      "startDate": "2024-04-12",
+      "endDate": "2024-10-12",
+      "Transaction": [
+        {
+          "txnId": "TXN001",
+          "txnType": "DEBIT",
+          "txnDate": "2024-09-12",
+          "amount": 200,
+          "valueDate": "2024-09-12",
+          "narration": "Online Shopping",
+          "statementDate": "2024-09-13",
+          "mcc": "5411",
+          "maskedCardNumber": "XXXX-XXXX-XXXX-1234"
+        },
+        {
+          "txnId": "TXN002",
+          "txnType": "DEBIT",
+          "txnDate": "2024-08-15",
+          "amount": 150,
+          "valueDate": "2024-08-15",
+          "narration": "Grocery Purchase",
+          "statementDate": "2024-08-16",
+          "mcc": "5311",
+          "maskedCardNumber": "XXXX-XXXX-XXXX-1234"
+        },
+        {
+          "txnId": "TXN003",
+          "txnType": "DEBIT",
+          "txnDate": "2024-07-10",
+          "amount": 500,
+          "valueDate": "2024-07-10",
+          "narration": "Fuel Payment",
+          "statementDate": "2024-07-11",
+          "mcc": "5541",
+          "maskedCardNumber": "XXXX-XXXX-XXXX-1234"
+        },
+        {
+          "txnId": "TXN004",
+          "txnType": "DEBIT",
+          "txnDate": "2024-06-05",
+          "amount": 120,
+          "valueDate": "2024-06-05",
+          "narration": "Restaurant Bill",
+          "statementDate": "2024-06-06",
+          "mcc": "5812",
+          "maskedCardNumber": "XXXX-XXXX-XXXX-1234"
+        },
+        {
+          "txnId": "TXN005",
+          "txnType": "DEBIT",
+          "txnDate": "2024-05-18",
+          "amount": 250,
+          "valueDate": "2024-05-18",
+          "narration": "Utility Bill Payment",
+          "statementDate": "2024-05-19",
+          "mcc": "4900",
+          "maskedCardNumber": "XXXX-XXXX-XXXX-1234"
+        },
+        {
+          "txnId": "TXN006",
+          "txnType": "DEBIT",
+          "txnDate": "2024-04-25",
+          "amount": 300,
+          "valueDate": "2024-04-25",
+          "narration": "Hotel Booking",
+          "statementDate": "2024-04-26",
+          "mcc": "7011",
+          "maskedCardNumber": "XXXX-XXXX-XXXX-1234"
+        }
+      ]
+    }
+  }
+}

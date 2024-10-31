@@ -1,0 +1,131 @@
+{
+  "Account": {
+    "linkedAccRef": "EQ123456789",
+    "userId": "ObjectId('67176c486d5ad817f74a8388')",
+    "maskedAccNumber": "XXXX-XXXX-XXXX-1234",
+    "version": 1.0,
+    "type": "equities",
+    "Profile": {
+      "Holders": {
+        "Holder": {
+          "name": "John Doe",
+          "dob": "1980-01-01",
+          "mobile": 9876543210,
+          "nominee": "REGISTERED",
+          "dematId": "DM1234567890",
+          "landline": "0221234567",
+          "address": "789 Wall Street, City",
+          "email": "john.doe@example.com",
+          "pan": "ABCDE1234F",
+          "ckycCompliance": true
+        }
+      }
+    },
+    "Summary": {
+      "investmentValue": 500000,
+      "currentValue": 650000,
+      "Investment": {
+        "Holdings": {
+          "Holding": {
+            "issuerName": "ABC Corp",
+            "isin": "IN1234567890",
+            "units": "1000",
+            "investmentDateTime": "2024-04-01T10:00:00",
+            "rate": "500",
+            "lastTradedPrice": "650",
+            "description": "Common stock of ABC Corp"
+          }
+        }
+      }
+    },
+    "Transactions": {
+      "startDate": "2024-04-01",
+      "endDate": "2024-10-10",
+      "Transaction": [
+        {
+          "txnId": "TXN001",
+          "orderId": "ORD001",
+          "tradeId": "TRADE001",
+          "companyName": "ABC Corp",
+          "symbol": "ABC",
+          "transactionDateTime": "2024-09-15T14:30:00",
+          "exchange": "NSE",
+          "isin": "IN1234567890",
+          "equityCategory": "EQUITY",
+          "instrumentType": "OPTIONS",
+          "optionType": "CALL",
+          "narration": "Purchased ABC Corp shares",
+          "rate": "600",
+          "totalCharge": "100",
+          "tradeValue": "60000",
+          "type": "BUY",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "units": "100",
+          "otherCharges": "50"
+        },
+        {
+          "txnId": "TXN002",
+          "orderId": "ORD002",
+          "tradeId": "TRADE002",
+          "companyName": "XYZ Ltd",
+          "symbol": "XYZ",
+          "transactionDateTime": "2024-08-10T12:00:00",
+          "exchange": "BSE",
+          "isin": "IN1234567891",
+          "equityCategory": "EQUITY",
+          "instrumentType": "OPTIONS",
+          "optionType": "PUT",
+          "narration": "Purchased XYZ Ltd shares",
+          "rate": "700",
+          "totalCharge": "150",
+          "tradeValue": "70000",
+          "type": "BUY",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "units": "100",
+          "otherCharges": "75"
+        },
+        {
+          "txnId": "TXN003",
+          "orderId": "ORD003",
+          "tradeId": "TRADE003",
+          "companyName": "LMN Inc",
+          "symbol": "LMN",
+          "transactionDateTime": "2024-07-05T11:30:00",
+          "exchange": "NSE",
+          "isin": "IN1234567892",
+          "equityCategory": "EQUITY",
+          "instrumentType": "FUTURES",
+          "narration": "Purchased LMN Inc shares",
+          "rate": "550",
+          "totalCharge": "120",
+          "tradeValue": "55000",
+          "type": "BUY",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "units": "100",
+          "otherCharges": "60"
+        },
+        {
+          "txnId": "TXN004",
+          "orderId": "ORD004",
+          "tradeId": "TRADE004",
+          "companyName": "DEF Ltd",
+          "symbol": "DEF",
+          "transactionDateTime": "2024-06-10T13:00:00",
+          "exchange": "BSE",
+          "isin": "IN1234567893",
+          "equityCategory": "EQUITY",
+          "instrumentType": "OPTIONS",
+          "optionType": "CALL",
+          "narration": "Purchased DEF Ltd shares",
+          "rate": "520",
+          "totalCharge": "110",
+          "tradeValue": "52000",
+          "type": "BUY",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "units": "100",
+          "otherCharges": "55"
+        }
+      ]
+    }
+  }
+}

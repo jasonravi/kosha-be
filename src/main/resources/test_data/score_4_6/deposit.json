@@ -1,0 +1,131 @@
+{
+  "Account": {
+    "type": "deposit",
+    "userId": "ObjectId('67176c486d5ad817f74a8388')",
+    "maskedAccNumber": "XXXX-XXXX-XXXX-1234",
+    "version": "1.0",
+    "linkedAccRef": "123ABC",
+    "Holder": {
+      "name": "John Doe",
+      "dob": "1990-05-12",
+      "mobile": "9876543210",
+      "email": "johndoe@example.com",
+      "pan": "ABCDE1234F",
+      "ckycCompliance": true,
+      "address": "123 Main Street, City"
+    },
+    "Summary": {
+      "currentBalance": 50000,
+      "currency": "INR",
+      "ifscCode": "HDFC0001234",
+      "micrCode": "400240001",
+      "status": "ACTIVE"
+    },
+    "Transactions": {
+      "startDate": "2024-04-01",
+      "endDate": "2024-10-01",
+      "Transaction": [
+        {
+          "txnId": "TXN001",
+          "amount": 50000,
+          "currentBalance": 150000,
+          "transactionTimestamp": "2024-10-01T09:00:00",
+          "narration": "Monthly Salary Credit",
+          "reference": "SAL12345",
+          "type": "CREDIT",
+          "category": "SALARY"
+        },
+        {
+          "txnId": "TXN002",
+          "amount": 2000,
+          "currentBalance": 148000,
+          "transactionTimestamp": "2024-10-05T14:30:00",
+          "narration": "Online Shopping",
+          "reference": "SPEND001",
+          "type": "DEBIT",
+          "category": "SPEND"
+        },
+        {
+          "txnId": "TXN003",
+          "amount": 48000,
+          "currentBalance": 196000,
+          "transactionTimestamp": "2024-09-01T09:00:00",
+          "narration": "Monthly Salary Credit",
+          "reference": "SAL12346",
+          "type": "CREDIT",
+          "category": "SALARY"
+        },
+        {
+          "txnId": "TXN004",
+          "amount": 3000,
+          "currentBalance": 193000,
+          "transactionTimestamp": "2024-09-10T12:00:00",
+          "narration": "Grocery Purchase",
+          "reference": "SPEND002",
+          "type": "DEBIT",
+          "category": "SPEND"
+        },
+        {
+          "txnId": "TXN005",
+          "amount": 47000,
+          "currentBalance": 240000,
+          "transactionTimestamp": "2024-08-01T09:00:00",
+          "narration": "Monthly Salary Credit",
+          "reference": "SAL12347",
+          "type": "CREDIT",
+          "category": "SALARY"
+        },
+        {
+          "txnId": "TXN006",
+          "amount": 2500,
+          "currentBalance": 237500,
+          "transactionTimestamp": "2024-08-15T11:00:00",
+          "narration": "Dining Out",
+          "reference": "SPEND003",
+          "type": "DEBIT",
+          "category": "SPEND"
+        },
+        {
+          "txnId": "TXN005",
+          "amount": 47000,
+          "currentBalance": 240000,
+          "transactionTimestamp": "2024-07-01T09:00:00",
+          "narration": "Monthly Salary Credit",
+          "reference": "SAL12347",
+          "type": "CREDIT",
+          "category": "SALARY"
+        },
+        {
+          "txnId": "TXN006",
+          "amount": 2500,
+          "currentBalance": 237500,
+          "transactionTimestamp": "2024-07-15T11:00:00",
+          "narration": "Dining Out",
+          "reference": "SPEND003",
+          "type": "DEBIT",
+          "category": "SPEND"
+        },
+        {
+          "txnId": "TXN005",
+          "amount": 47000,
+          "currentBalance": 240000,
+          "transactionTimestamp": "2024-06-01T09:00:00",
+          "narration": "Monthly Salary Credit",
+          "reference": "SAL12347",
+          "type": "CREDIT",
+          "category": "SALARY"
+        },
+        {
+          "txnId": "TXN006",
+          "amount": 2500,
+          "currentBalance": 237500,
+          "transactionTimestamp": "2024-06-15T11:00:00",
+          "narration": "Dining Out",
+          "reference": "SPEND003",
+          "type": "DEBIT",
+          "category": "SPEND"
+        }
+      ]
+    }
+  }
+}

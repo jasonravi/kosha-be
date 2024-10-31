@@ -1,0 +1,92 @@
+{
+  "Account": {
+    "linkedAccRef": "FD123456789",
+    "maskedAccNumber": "XXXX-XXXX-XXXX-5678",
+    "version": "1.1",
+    "type": "term_deposit",
+    "Profile": {
+      "Holders": {
+        "type": "JOINT",
+        "Holder": {
+          "name": "John Doe",
+          "dob": "2002-09-24",
+          "mobile": "91729391923",
+          "nominee": "NOT-REGISTERED",
+          "email": "qw@gmail.com",
+          "pan": "AAAPL1234C",
+          "ckycCompliance": true
+        }
+      }
+    },
+    "Summary": {
+      "openingDate": "2024-04-01",
+      "accountType": "FIXED",
+      "branch": "Main Branch",
+      "ifsc": "HDFC0001234",
+      "maturityAmount": 105000,
+      "description": "Fixed Deposit",
+      "interestPayout": "HALF-YEARLY",
+      "interestRate": "6.5",
+      "maturityDate": "2027-04-01",
+      "principalAmount": 100000,
+      "tenureDays": 0,
+      "tenureMonths": 0,
+      "tenureYears": 3,
+      "interestComputation": "COMPOUND",
+      "compoundingFrequency": "HALF-YEARLY",
+      "interestPeriodicPayoutAmount": 3250,
+      "interestOnMaturity": 5000,
+      "currentValue": 100000
+    },
+    "Transactions": {
+      "startDate": "2024-04-01",
+      "endDate": "2024-10-01",
+      "Transaction": [
+        {
+          "txnId": "TXN001",
+          "amount": 100000,
+          "narration": "Fixed Deposit Initiated",
+          "type": "DEPOSIT",
+          "mode": "ONLINE",
+          "balance": 100000,
+          "transactionDateTime": "2024-04-01T09:00:00",
+          "valueDate": "2024-04-01",
+          "reference": "FD-INIT-001"
+        },
+        {
+          "txnId": "TXN002",
+          "amount": 3250,
+          "narration": "Interest Payout - Half Yearly",
+          "type": "CREDIT",
+          "mode": "BANK_TRANSFER",
+          "balance": 103250,
+          "transactionDateTime": "2024-07-01T09:00:00",
+          "valueDate": "2024-07-01",
+          "reference": "FD-INT-002"
+        },
+        {
+          "txnId": "TXN003",
+          "amount": 3250,
+          "narration": "Interest Payout - Half Yearly",
+          "type": "CREDIT",
+          "mode": "BANK_TRANSFER",
+          "balance": 106500,
+          "transactionDateTime": "2024-10-01T09:00:00",
+          "valueDate": "2024-10-01",
+          "reference": "FD-INT-003"
+        },
+        {
+          "txnId": "TXN004",
+          "amount": 1000,
+          "narration": "TDS Deduction",
+          "type": "TDS",
+          "mode": "BANK_TRANSFER",
+          "balance": 105500,
+          "transactionDateTime": "2024-10-01T12:00:00",
+          "valueDate": "2024-10-01",
+          "reference": "FD-TDS-004"
+        }
+      ]
+    }
+  }
+}
