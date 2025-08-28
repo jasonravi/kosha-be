@@ -24,21 +24,85 @@ public class ApiService {
         this.webClient = webClientBuilder.baseUrl(appProperties.getSahamatiUrl()).build();
     }
 
-    public  <T> String makePostRequest(T requestBody, String path, String apiName) throws JsonProcessingException {
-
-        log.info("{} Request is {} ",apiName,  objectMapper.writeValueAsString(requestBody));
+    // POST
+    public <T> String makePostRequest(T requestBody, String path, String apiName) throws JsonProcessingException {
+        log.info("{} Request (POST) is {} ", apiName, objectMapper.writeValueAsString(requestBody));
         Mono<String> response = this.webClient
-                .post()
-                .uri(path)
-                .bodyValue(requestBody)
-                .headers(httpHeaders -> {
-                    httpHeaders.add("tenantCode", "kosha");
-                })
-                .retrieve()
-                .bodyToMono(String.class);
+            .post()
+            .uri(path)
+            .bodyValue(requestBody)
+            .headers(httpHeaders -> httpHeaders.add("tenantCode", "kosha"))
+            .retrieve()
+            .bodyToMono(String.class);
 
         String result = response.block();
-        log.info(" {} Response is {} ", apiName, objectMapper.writeValueAsString(result));
+        log.info("{} Response (POST) is {} ", apiName, result);
         return result;
+    }
+
+    // GET
+    public String makeGetRequest(String path, String apiName) {
+        log.info("{} Request (GET) on {}", apiName, path);
+        Mono<String> response = this.webClient
+            .get()
+            .uri(path)
+            .headers(httpHeaders -> httpHeaders.add("tenantCode", "kosha"))
+            .retrieve()
+            .bodyToMono(String.class);
+
+        String result = response.block();
+        log.info("{} Response (GET) is {} ", apiName, result);
+        return result;
+    }
+
+    // PUT
+    public <T> String makePutRequest(T requestBody, String path, String apiName) throws JsonProcessingException {
+        log.info("{} Request (PUT) is {} ", apiName, objectMapper.writeValueAsString(requestBody));
+        Mono<String> response = this.webClient
+            .put()
+            .uri(path)
+            .bodyValue(requestBody)
+            .headers(httpHeaders -> httpHeaders.add("tenantCode", "kosha"))
+            .retrieve()
+            .bodyToMono(String.class);
+
+        String result = response.block();
+        log.info("{} Response (PUT) is {} ", apiName, result);
+        return result;
+    }
+
+    // PATCH
+    public <T> String makePatchRequest(T requestBody, String path, String apiName) throws JsonProcessingException {
+        log.info("{} Request (PATCH) is {} ", apiName, objectMapper.writeValueAsString(requestBody));
+        Mono<String> response = this.webClient
+            .patch()
+            .uri(path)
+            .bodyValue(requestBody)
+            .headers(httpHeaders -> httpHeaders.add("tenantCode", "kosha"))
+            .retrieve()
+            .bodyToMono(String.class);
+
+        String result = response.block();
+        log.info("{} Response (PATCH) is {} ", apiName, result);
+        return result;
+    }
+
+    // DELETE
+    public String func(String path, String apiName) {
+        if(path == "ravi") {
+            return "ravi";
+        } else  if(path == "ravi") {
+            return "ravi";
+        }
+        else  if(path == "ravi") {
+            return "ravi";
+        }
+        else  if(path == "ravi") {
+            return "ravi";
+        }
+        else  if(path == "ravi") {
+            return "ravi";
+        }
+        return "deepak";
     }
 }
