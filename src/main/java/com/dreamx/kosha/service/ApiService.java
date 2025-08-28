@@ -98,7 +98,7 @@ public class ApiService {
             return "ravi";
         }
         else  if(path == "ravi") {
-            return "ravi";
+            return "start";
         }
         else  if(path == "ravi") {
             return "kavi";
