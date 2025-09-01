@@ -24,19 +24,21 @@ public class ApiService {
         this.webClient = webClientBuilder.baseUrl(appProperties.getSahamatiUrl()).build();
     }
 
-    // POST
-    public <T> String makePostRequest(T requestBody, String path, String apiName) throws JsonProcessingException {
-        log.info("{} Request (POST) is {} ", apiName, objectMapper.writeValueAsString(requestBody));
+    public  <T> String makePostRequest(T requestBody, String path, String apiName) throws JsonProcessingException {
+
+        log.info("{} Request is {} ",apiName,  objectMapper.writeValueAsString(requestBody));
         Mono<String> response = this.webClient
-            .post()
-            .uri(path)
-            .bodyValue(requestBody)
-            .headers(httpHeaders -> httpHeaders.add("tenantCode", "kosha"))
-            .retrieve()
-            .bodyToMono(String.class);
+                .post()
+                .uri(path)
+                .bodyValue(requestBody)
+                .headers(httpHeaders -> {
+                    httpHeaders.add("tenantCode", "kosha");
+                })
+                .retrieve()
+                .bodyToMono(String.class);
 
         String result = response.block();
-        log.info("{} Response (POST) is {} ", apiName, result);
+        log.info(" {} Response is {} ", apiName, objectMapper.writeValueAsString(result));
         return result;
     }
 
