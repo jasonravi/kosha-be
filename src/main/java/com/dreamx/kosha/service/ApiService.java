@@ -41,4 +41,70 @@ public class ApiService {
         log.info(" {} Response is {} ", apiName, objectMapper.writeValueAsString(result));
         return result;
     }
+
+    // GET
+    public String makeGetRequest(String path, String apiName) {
+        log.info("{} Request (GET) on {}", apiName, path);
+        Mono<String> response = this.webClient
+            .get()
+            .uri(path)
+            .headers(httpHeaders -> httpHeaders.add("tenantCode", "kosha"))
+            .retrieve()
+            .bodyToMono(String.class);
+
+        String result = response.block();
+        log.info("{} Response (GET) is {} ", apiName, result);
+        return result;
+    }
+
+    // PUT
+    public <T> String makePutRequest(T requestBody, String path, String apiName) throws JsonProcessingException {
+        log.info("{} Request (PUT) is {} ", apiName, objectMapper.writeValueAsString(requestBody));
+        Mono<String> response = this.webClient
+            .put()
+            .uri(path)
+            .bodyValue(requestBody)
+            .headers(httpHeaders -> httpHeaders.add("tenantCode", "kosha"))
+            .retrieve()
+            .bodyToMono(String.class);
+
+        String result = response.block();
+        log.info("{} Response (PUT) is {} ", apiName, result);
+        return result;
+    }
+
+    // PATCH
+    public <T> String makePatchRequest(T requestBody, String path, String apiName) throws JsonProcessingException {
+        log.info("{} Request (PATCH) is {} ", apiName, objectMapper.writeValueAsString(requestBody));
+        Mono<String> response = this.webClient
+            .patch()
+            .uri(path)
+            .bodyValue(requestBody)
+            .headers(httpHeaders -> httpHeaders.add("tenantCode", "kosha"))
+            .retrieve()
+            .bodyToMono(String.class);
+
+        String result = response.block();
+        log.info("{} Response (PATCH) is {} ", apiName, result);
+        return result;
+    }
+
+    // DELETE
+    public String func(String path, String apiName) {
+        if(path == "ravi") {
+            return "ravi";
+        } else  if(path == "ravi") {
+            return "ravi";
+        }
+        else  if(path == "ravi") {
+            return "sita";
+        }
+        else  if(path == "ravi") {
+            return "start";
+        }
+        else  if(path == "ravi") {
+            return "kavi";
+        }
+        return "deepak";
+    }
 }
